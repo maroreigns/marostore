@@ -1,0 +1,58 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Header Section */
+  .header {
+    background-color: pink;
+    padding: 50px 0;
+    margin-bottom: 40px;
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+    color: #343a40;
+  }
+  
+  .header p {
+    font-size: 1.2rem;
+    color: #6c757d;
+  }
+  
+  /* Products Section */
+  .products .card {
+    margin-bottom: 30px;
+    border: none;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .products .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .products .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .products .btn-primary {
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .products .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #343a40;
+    color: #ffffff;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
