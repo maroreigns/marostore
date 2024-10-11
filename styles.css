@@ -5,7 +5,7 @@ body {
   
   /* Header Section */
   .header {
-    background-color: pink;
+    background-color: #ffc0cb;
     padding: 50px 0;
     margin-bottom: 40px;
   }
@@ -38,7 +38,7 @@ body {
   
   .products .btn-primary {
     background-color: #007bff;
-    border: none;
+    border-radius: 9px;
     transition: background-color 0.3s ease-in-out;
   }
   
@@ -54,6 +54,20 @@ body {
     color: #ff6347;
     animation: pop 1.5s infinite ease-in-out;
   }
+
+  .pop-text2 {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ff6347;
+    animation: pop 1.5s infinite ease-in-out;
+  }
+
+  .deals2{
+    text-align: center;
+    color: #6c757d;
+    background-color: #ffc0cb;
+  }
   
   @keyframes pop {
     0% {
@@ -66,11 +80,47 @@ body {
       transform: scale(1);
     }
   }
+
+
+  /* read more section */
+  
+  .content {
+    width: 300px;
+    margin: 0 auto;
+   
+   
+  }
+  
+  .more-text {
+    display: none;
+    margin-top: 10px;
+    
+  }
+
+
+  
+  .read-more-btn{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 9px;
+    
+  }
+
+  
+  .read-more-btn:hover {
+    background-color: #0056b3;
+  }
+  
   
   
   /* Footer */
   .footer {
-    background-color: #343a40;
+    background-color: #ffc0cb;
     color: #ffffff;
   }
   
