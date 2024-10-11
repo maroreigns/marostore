@@ -1,186 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MARO STORE</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Affiliate Products</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <!-- Navigation -->
+
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">MAROSTORE</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-      aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <!-- <a class="nav-link" href="products.html">Products</a> -->
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
-        </li>
-      </ul>
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">MAROSTORES</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <!-- <a class="nav-link" href="#">Products</a> -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 
-  <!-- Header Section -->
-  <header class="header text-center">
-    <div class="container">
-      <h1>Welcome to Maro's Store</h1>
-      <p>Discover amazing products and deals below!</p>
-      <div class="pop-text">
-        AMAZING DEALS!
-      </div>
+  <!-- Product Section -->
+  <section class="container mt-5">
+    <div class="headertext">
+      <h1 class="h1">Welcome to Maro's Stores</h1>
+      <p class="ptext">Discover amazing products and deals below!</p>
+        <h1 class="popup-text">AMAZING DEALS!</h1>
     </div>
-  </header>
 
-  <!-- Products Section -->
-  <section class="products py-5">
-    <div class="container">
-      <div class="row">
-        <!-- Product 1 -->
-        <div class="col-md-4">
-          <div class="card">
-            <img class="card-img-top" src="https://cdn.britannica.com/09/241709-050-149181B1/apple-iphone-11-2019.jpg" alt="Product 1">
-            <div class="card-body">
-              <h5 class="card-title">iPHONE 15</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <h4 class="price">$100</h4>
-              <a href="#" class="btn btn-primary" target="_blank">Buy Now</a>
-            </div>
+    </div>
+    <div class="row">
+      <!-- Product Card 1 -->
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://www.apple.com/newsroom/images/product/watch/standard/Apple_watch-experience-for-entire-family-hero_09152020_big.jpg.large.jpg" class="card-img-top img1" alt="Product Image 1">
+            <img src="https://www.apple.com/newsroom/images/2023/09/apple-introduces-the-advanced-new-apple-watch-series-9/article/Apple-Watch-S9-hero-230912_Full-Bleed-Image.jpg.large.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
           </div>
-        </div>
-
-        <!-- Product 2 -->
-        <div class="col-md-4">
-          <div class="card">
-            <img class="card-img-top" src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/s10-case-unselect-gallery-1-202409_FMT_WHH?wid=752&hei=720&fmt=p-jpg&qlt=80&.v=1724620929305" alt="Product 2">
-            <div class="card-body">
-              <h5 class="card-title">APPLE WATCH</h5>
-              <p class="card-text">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <h4 class="price">$100</h4>
-              <a href="#" class="btn btn-primary" target="_blank">Buy Now</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 3 -->
-        <div class="col-md-4">
-          <div class="card">
-            <img class="card-img-top" src="https://i.pcmag.com/imagery/reviews/005x4wlhEjDj4CRKQQuVVet-10.fit_scale.size_760x427.v1569472269.jpg" alt="Product 3">
-            <div class="card-body">
-              <h5 class="card-title">MAC BOOK</h5>
-              <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-              <h4 class="price">$100</h4>
-              <a href="#" class="btn btn-primary" target="_blank">Buy Now</a>
-            </div>
+          <div class="card-body">
+            <h5 class="card-title">APPLE WATCH</h5>
+            <p class="card-text">Apple Watch SE (2nd Gen) [GPS 40mm] Smartwatch with Starlight Aluminum Case with Starlight Sport Band S/M. Fitness & Sleep Tracker, Crash Detection, Heart Rate Monitor</p>
+            <button class="btn btn-primary" onclick="toggleImage(this)">View Image</button>
+            <a href="#" class="btn btn-success">Buy Now</a>
           </div>
         </div>
       </div>
+
+      <!-- Product Card 2 -->
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://www.apple.com/newsroom/images/2023/09/apple-introduces-the-advanced-new-apple-watch-series-9/article/Apple-Watch-S9-hero-230912_Full-Bleed-Image.jpg.large.jpg" class="card-img-top img1" alt="Product Image 1">
+            <img src="https://www.apple.com/newsroom/images/product/watch/lifestyle/Apple_announces-watch-se_09152020_big.jpg.large.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">APPLE WATCH</h5>
+            <p class="card-text">Apple Watch SE (2nd Gen) [GPS 40mm] Smartwatch with Starlight Aluminum Case with Starlight Sport Band S/M. Fitness & Sleep Tracker, Crash Detection, Heart Rate Monitor</p>
+            <button class="btn btn-primary" onclick="toggleImage(this)">View Image</button>
+            <a href="#" class="btn btn-success">Buy Now</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://www.apple.com/newsroom/images/2023/09/apple-introduces-the-advanced-new-apple-watch-series-9/article/Apple-Watch-S9-hero-230912_Full-Bleed-Image.jpg.large.jpg" class="card-img-top img1" alt="Product Image 1">
+            <img src="https://www.apple.com/newsroom/images/product/watch/lifestyle/Apple_announces-watch-se_09152020_big.jpg.large.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">APPLE WATCH</h5>
+            <p class="card-text">Apple Watch SE (2nd Gen) [GPS 40mm] Smartwatch with Starlight Aluminum Case with Starlight Sport Band S/M. Fitness & Sleep Tracker, Crash Detection, Heart Rate Monitor</p>
+            <button class="btn btn-primary" onclick="toggleImage(this)">View Image</button>
+            <a href="#" class="btn btn-success">Buy Now</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Add more product cards as needed -->
     </div>
   </section>
-
-  <div class="deals2">
-    <div class="pop-text">
-      MORE AMAZING DEALS!
-    </div>
-    <p class="p2">Welcome to our exclusive deals section! We’re excited<br>
-       to bring you unbeatable offers and discounts on our top products.<br>
-        Whether you're looking for [mention specific categories or types<br>
-         of products], we’ve got something special just for you.</p>
-  </div>
-
-  
-
-  <!-- section 2 -->
-
-
-
-  <!-- Products Section -->
-  <section class="products py-5">
-    <div class="container">
-      <div class="row">
-        <!-- Product 1 -->
-        <div class="col-md-4">
-          <div class="card">
-            <img class="card-img-top" src="https://cdn.britannica.com/09/241709-050-149181B1/apple-iphone-11-2019.jpg" alt="Product 1">
-            <div class="card-body">
-              <h5 class="card-title">iPHONE 15</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <h4 class="price">$100</h4>
-              <a href="#" class="btn btn-primary" target="_blank">Buy Now</a>
-            </div>
-          </div>
-        </div>
-
-
-         <!-- Product 2 -->
-         <div class="col-md-4">
-          <div class="card">
-            <img class="card-img-top" src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/s10-case-unselect-gallery-1-202409_FMT_WHH?wid=752&hei=720&fmt=p-jpg&qlt=80&.v=1724620929305" alt="Product 2">
-            <div class="card-body">
-              <h5 class="card-title">APPLE WATCH</h5>
-              <p class="card-text">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <h4 class="price">$100</h4>
-              <a href="#" class="btn btn-primary" target="_blank">Buy Now</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 3 -->
-        <div class="col-md-4">
-          <div class="card">
-            <img class="card-img-top" src="https://i.pcmag.com/imagery/reviews/005x4wlhEjDj4CRKQQuVVet-10.fit_scale.size_760x427.v1569472269.jpg" alt="Product 3">
-            <div class="card-body">
-              <h5 class="card-title">MAC BOOK</h5>
-              <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-              <h4 class="price">$100</h4>
-              <a href="#" class="btn btn-primary" target="_blank">Buy Now</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  
 
   <!-- Footer -->
-  <footer class="footer bg-dark text-white text-center py-4">
-    <div class="container">
-      <p>© 2024 DM Technonogies. All rights reserved.</p>
-    </div>
+  <footer class="bg-dark text-light text-center p-3 mt-5">
+    <p>© 2024 Affiliate Website. All Rights Reserved.</p>
   </footer>
-  <script src="./script.js"></script>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
-
-  <!-- Key Features:
-  Responsive Design: Uses Bootstrap grid to ensure responsiveness across devices.
-  Header: Welcoming header section with a prominent call to action.
-  Products Section: Each product is displayed in a card with an image, description, and a "Buy Now" button linking to an affiliate URL.
-  Footer: Simple footer for brand and copyright.
-  Customization:
-  Replace https://via.placeholder.com/300x200 in the image sources with actual product images.
-  Replace # in the Buy Now links with your affiliate links.
-  Modify the product descriptions and titles as needed. -->
-
-
-
-  
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>

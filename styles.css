@@ -1,130 +1,59 @@
-/* Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
-  }
-  
-  /* Header Section */
-  .header {
-    background-color: #ffc0cb;
-    padding: 50px 0;
-    margin-bottom: 40px;
-  }
-  
-  .header h1 {
-    font-size: 2.5rem;
-    color: #343a40;
-  }
-  
-  .header p {
-    font-size: 1.2rem;
-    color: #6c757d;
-  }
-  
-  /* Products Section */
-  .products .card {
-    margin-bottom: 30px;
-    border: none;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .products .card:hover {
-    transform: scale(1.05);
-  }
-  
-  .products .card-img-top {
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .products .btn-primary {
-    background-color: #007bff;
-    border-radius: 9px;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .products .btn-primary:hover {
-    background-color: #0056b3;
-  }
+  font-family: Arial, sans-serif;
+}
 
-  /* Animatiom text section */
+/* pop up text section */
 
-  .pop-text {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #ff6347;
-    animation: pop 1.5s infinite ease-in-out;
-  }
+.headertext{
+  background: pink;
+  padding-top: 30px;
+  text-align: center;
+}
 
-  .pop-text2 {
-    text-align: center;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #ff6347;
-    animation: pop 1.5s infinite ease-in-out;
-  }
+.ptext{
+  color: #6c757d;
+}
 
-  .deals2{
-    text-align: center;
-    color: #6c757d;
-    background-color: #ffc0cb;
-  }
-  
-  @keyframes pop {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.5);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
+.popup-text{
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ff6347;
+  animation: pop 1.5s infinite ease-in-out;
+}
 
 
-  /* read more section */
-  
-  .content {
-    width: 300px;
-    margin: 0 auto;
-   
-   
+@keyframes pop {
+  0% {
+    transform: scale(1);
   }
-  
-  .more-text {
-    display: none;
-    margin-top: 10px;
-    
+  50% {
+    transform: scale(1.5);
   }
+  100% {
+    transform: scale(1);
+  }
+}
 
+.card-img-container {
+  position: relative;
+}
 
-  
-  .read-more-btn{
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-    border-radius: 9px;
-    
-  }
+.card-img-container img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
 
-  
-  .read-more-btn:hover {
-    background-color: #0056b3;
-  }
-  
-  
-  
-  /* Footer */
-  .footer {
-    background-color: #ffc0cb;
-    color: #ffffff;
-  }
-  
-  .footer p {
-    margin: 0;
-  }
-  
+.card-body {
+  text-align: center;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
