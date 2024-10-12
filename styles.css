@@ -21,6 +21,9 @@ body {
   animation: pop 1.5s infinite ease-in-out;
 }
 
+span{
+  color: #ff6347;
+}
 
 @keyframes pop {
   0% {
