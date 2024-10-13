@@ -1,15 +1,13 @@
-document.getElementById('submitReview').addEventListener('click', function() {
-    const reviewInput = document.getElementById('reviewInput');
-    const reviewText = reviewInput.value;
-
-    if (reviewText) {
-        const reviewSection = document.getElementById('reviewSection');
-        const newReview = document.createElement('div');
-        newReview.classList.add('review');
-        newReview.innerHTML = `<p>${reviewText}</p>`;
-        reviewSection.appendChild(newReview);
-        reviewInput.value = ''; // Clear input after submission
-    } else {
-        alert('Please write a review before submitting.');
-    }
-});
+document.querySelectorAll('.read-more').forEach(button => {
+    button.addEventListener('click', function () {
+      const productDescription = this.closest('.product').querySelector('.more-text');
+      if (productDescription.classList.contains('d-none')) {
+        productDescription.classList.remove('d-none');
+        this.textContent = 'Read Less';
+      } else {
+        productDescription.classList.add('d-none');
+        this.textContent = 'Read More';
+      }
+    });
+  });
+  
