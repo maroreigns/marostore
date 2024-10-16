@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="products_review.css"> 
+    <title>Maro Stores</title>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbar">
+    <a class="navbar-brand" href="index.html">MARO<span>STORES</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="products_review.html">Products Review</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Product Review Section -->
+<div class="container my-4">
+    <div class="product-section">
+        <img src="https://cdn.mos.cms.futurecdn.net/yDn3ZSXu9eSBxmXQDZ4PCF-1200-80.jpg" alt="Product 1" class="product-image">
+        <div class="product-title">Product 1 Title</div>
+        <div class="vertical-line"></div>
+        <div class="text-center">
+            <div class="btn-group" role="group">
+                <button class="btn btn-primary" onclick="toggleDetails('details1')">Read More</button>
+                <a href="https://example.com/buy-product1" class="btn btn-success">Buy Now</a>
+            </div>
+        </div>
+    </div>
+    <div id="details1" class="product-details">
+        <p>Here are the details about Product 1. You can include specifications, features, and any additional information here.</p>
+    </div>
+
+    <div class="product-section">
+        <img src="https://cdn.mos.cms.futurecdn.net/yDn3ZSXu9eSBxmXQDZ4PCF-1200-80.jpg" alt="Product 2" class="product-image">
+        <div class="product-title">Product 2 Title</div>
+        <div class="vertical-line"></div>
+        <div class="text-center">
+            <div class="btn-group" role="group">
+                <button class="btn btn-primary" onclick="toggleDetails('details2')">Read More</button>
+                <a href="https://example.com/buy-product2" class="btn btn-success">Buy Now</a>
+            </div>
+        </div>
+    </div>
+    <div id="details2" class="product-details">
+        <p>Here are the details about Product 2. You can include specifications, features, and any additional information here.</p>
+    </div>
+
+    <div class="product-section">
+        <img src="https://cdn.mos.cms.futurecdn.net/yDn3ZSXu9eSBxmXQDZ4PCF-1200-80.jpg" alt="Product 3" class="product-image">
+        <div class="product-title">Product 3 Title</div>
+        <div class="vertical-line"></div>
+        <div class="text-center">
+            <div class="btn-group" role="group">
+                <button class="btn btn-primary" onclick="toggleDetails('details3')">Read More</button>
+                <a href="https://example.com/buy-product3" class="btn btn-success">Buy Now</a>
+            </div>
+        </div>
+    </div>
+    <div id="details3" class="product-details">
+        <p>Here are the details about Product 3. You can include specifications, features, and any additional information here.</p>
+    </div>
+</div>
+
+<!-- Scroll to Top Button -->
+<button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
+
+ <!-- Footer -->
+ <footer class="bg-dark text-light text-center p-3 mt-5">
+    <p>© 2024 DM Technologies. All Rights Reserved.</p>
+  </footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="products_review.js"></script>
+</body>
+</html>

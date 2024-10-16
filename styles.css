@@ -11,6 +11,12 @@ body {
   text-align: center;
 }
 
+.navbar-scrolled {
+  background-color: lightblue !important;
+  transition: background-color 0.3s;
+}
+
+
 .ptext{
   color: #6c757d;
 }
@@ -89,6 +95,31 @@ body {
   animation: glowing 5s infinite alternate ease-in-out;
   z-index: -1;
   filter: blur(50px);
+}
+
+
+/* Scroll to Top Button Styling */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  display: none;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 24px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  transition: opacity 0.3s;
+  z-index: 1000;
+}
+#scrollToTopBtn:hover {
+  background-color: #0056b3;
 }
 
 /* Fade-in effect for text */
