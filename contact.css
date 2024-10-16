@@ -1,96 +1,81 @@
+/* General styles for the page */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body, html {
-    height: 100%;
     font-family: 'Arial', sans-serif;
+  }
+  
+  body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(83, 83, 243);
-   
-}
+    min-height: 100vh;
+    background-color: #f0f0f5;
+  }
 
-.contact-container {
-    width: 100%;
-    max-width: 400px;
-    padding: 20px;
-    text-align: center;
-}
-
-.contact-card {
-    color: #fff;
-   
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.contact-card h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.contact-card p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.contact-button {
-    text-decoration: none;
-    color: white;
-    background-color: #007bff;
-    padding: 15px 0;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-    font-size: 1.2rem;
-}
-
-.contact-button:hover {
-    background-color: #0056b3;
-}
-
-.nav-item{
+  .nav-item{
     font-size: 20px;
-    margin-bottom: 20px;
-}
-
-li{
+    padding-bottom: 30px;
+   
+  }
+  
+  li{
     list-style: none;
-}
+  }
 
-
-
-li a{
-    text-decoration: none;
-    color: white;
-    background-color: #007bff;
-    padding: 15px 0;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-    font-size: 1.1rem;
+  li a{
+    color: #333;
     
-}
-
-li a:hover{
-    background-color: #0056b3;
-}
-
-@media (max-width: 768px) {
-    .contact-card h1 {
-        font-size: 1.5rem;
-    }
-
-    .contact-button {
-        font-size: 1rem;
-    }
-}
+    
+  }
+  
+  /* Container for the contact page */
+  .contact-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+  }
+  
+  /* Heading and description */
+  .contact-container h1 {
+    margin-bottom: 10px;
+    font-size: 28px;
+    color: #333;
+  }
+  
+  .contact-container p {
+    margin-bottom: 30px;
+    color: #666;
+  }
+  
+  /* Contact items */
+  .contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  
+  .contact-item i {
+    margin-right: 10px;
+    color: #4CAF50;
+    font-size: 24px;
+  }
+  
+  /* Links for email and WhatsApp */
+  .contact-item a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-item a:hover {
+    color: #4CAF50;
+  }
+  
