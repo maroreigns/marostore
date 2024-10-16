@@ -26,20 +26,24 @@ window.addEventListener('scroll', () => {
 });
 
 
-// Scroll to Top Function
-const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-
-window.onscroll = function() {
-  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-    scrollToTopBtn.style.display = 'block';
+// scroll to top function
+window.onscroll = function () {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    scrollTopBtn.style.opacity = "1";  // Fully visible
+    scrollTopBtn.style.pointerEvents = "auto";  // Enable click
   } else {
-    scrollToTopBtn.style.display = 'none';
+    scrollTopBtn.style.opacity = "0.5";  // Partially visible
+    scrollTopBtn.style.pointerEvents = "none";  // Prevent click when not needed
   }
 };
 
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+// Scroll to the top when the button is clicked
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
 
+
+
+  
 
   
