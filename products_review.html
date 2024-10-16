@@ -36,62 +36,80 @@
 <!-- Product Review Section -->
 <div class="container my-4">
     <div class="product-section">
-        <img src="https://cdn.mos.cms.futurecdn.net/yDn3ZSXu9eSBxmXQDZ4PCF-1200-80.jpg" alt="Product 1" class="product-image">
-        <div class="product-title">Product 1 Title</div>
-        <div class="vertical-line"></div>
-        <div class="text-center">
-            <div class="btn-group" role="group">
+        <div class="col-md-6">
+            <img src="https://cdn.mos.cms.futurecdn.net/yDn3ZSXu9eSBxmXQDZ4PCF-1200-80.jpg" alt="Product 1" class="img-fluid">
+        </div>
+        <div class="col-md-6 d-flex flex-column align-items-center">
+            <h5 class="product-title text-center mb-3">Product 1 Title</h5>
+            <p>This is an introductory summary of Product 1. It highlights key features briefly to attract the user’s attention.</p>
+
+            <!-- Product Details Section -->
+            <div id="details1" class="product-details mt-3" style="display: none;">
+                <p>Here are the full details about Product 1. You can include specifications, features, and additional information here.</p>
+            </div>
+
+            <div class="btn-group mt-2" role="group">
                 <button class="btn btn-primary" onclick="toggleDetails('details1')">Read More</button>
                 <a href="https://example.com/buy-product1" class="btn btn-success">Buy Now</a>
             </div>
         </div>
     </div>
-    <div id="details1" class="product-details">
-        <p>Here are the details about Product 1. You can include specifications, features, and any additional information here.</p>
-    </div>
+    <hr class="product-hr">
 
     <div class="product-section">
-        <img src="https://cdn.mos.cms.futurecdn.net/yDn3ZSXu9eSBxmXQDZ4PCF-1200-80.jpg" alt="Product 2" class="product-image">
-        <div class="product-title">Product 2 Title</div>
-        <div class="vertical-line"></div>
-        <div class="text-center">
-            <div class="btn-group" role="group">
+        <div class="col-md-6">
+            <img src="https://cdn.mos.cms.futurecdn.net/yDn3ZSXu9eSBxmXQDZ4PCF-1200-80.jpg" alt="Product 2" class="img-fluid">
+        </div>
+        <div class="col-md-6 d-flex flex-column align-items-center">
+            <h5 class="product-title text-center mb-3">Product 2 Title</h5>
+            <p>This is an introductory summary of Product 2. It briefly mentions key benefits to spark interest.</p>
+
+            <div id="details2" class="product-details mt-3" style="display: none;">
+                <p>Here are the full details about Product 2. You can include specifications, features, and additional information here.</p>
+            </div>
+
+            <div class="btn-group mt-2" role="group">
                 <button class="btn btn-primary" onclick="toggleDetails('details2')">Read More</button>
                 <a href="https://example.com/buy-product2" class="btn btn-success">Buy Now</a>
             </div>
         </div>
     </div>
-    <div id="details2" class="product-details">
-        <p>Here are the details about Product 2. You can include specifications, features, and any additional information here.</p>
-    </div>
+    <hr class="product-hr">
 
     <div class="product-section">
-        <img src="https://cdn.mos.cms.futurecdn.net/yDn3ZSXu9eSBxmXQDZ4PCF-1200-80.jpg" alt="Product 3" class="product-image">
-        <div class="product-title">Product 3 Title</div>
-        <div class="vertical-line"></div>
-        <div class="text-center">
-            <div class="btn-group" role="group">
+        <div class="col-md-6">
+            <img src="https://cdn.mos.cms.futurecdn.net/yDn3ZSXu9eSBxmXQDZ4PCF-1200-80.jpg" alt="Product 3" class="img-fluid">
+        </div>
+        <div class="col-md-6 d-flex flex-column align-items-center">
+            <h5 class="product-title text-center mb-3">Product 3 Title</h5>
+            <p>This is an introductory summary of Product 3. It provides a sneak peek into what the product offers.</p>
+
+            <div id="details3" class="product-details mt-3" style="display: none;">
+                <p>Here are the full details about Product 3. You can include specifications, features, and additional information here.</p>
+            </div>
+
+            <div class="btn-group mt-2" role="group">
                 <button class="btn btn-primary" onclick="toggleDetails('details3')">Read More</button>
                 <a href="https://example.com/buy-product3" class="btn btn-success">Buy Now</a>
             </div>
         </div>
     </div>
-    <div id="details3" class="product-details">
-        <p>Here are the details about Product 3. You can include specifications, features, and any additional information here.</p>
-    </div>
+    <hr class="product-hr">
 </div>
 
 <!-- Scroll to Top Button -->
 <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
 
- <!-- Footer -->
- <footer class="bg-dark text-light text-center p-3 mt-5">
+<!-- Footer -->
+<footer class="bg-dark text-light text-center p-3 mt-5">
     <p>© 2024 DM Technologies. All Rights Reserved.</p>
-  </footer>
+</footer>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="products_review.js"></script>
+
+
 </body>
 </html>

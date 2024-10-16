@@ -58,6 +58,24 @@ span{
   #scrollToTopBtn:hover {
     background-color: #0056b3;
   }
+
+
+  .product-section {
+    position: relative;
+}
+
+.product-hr {
+    width: 90%; /* Adjust width to align the line */
+    margin: 0 auto 20px;
+    border: 1px solid #ddd;
+}
+
+@media (min-width: 768px) {
+    .product-section {
+        display: flex;
+        align-items: center;
+    }
+}
   
 
 
