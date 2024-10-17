@@ -39,7 +39,7 @@ window.onscroll = function () {
     scrollTopBtn.style.opacity = "1";  // Fully visible
     scrollTopBtn.style.pointerEvents = "auto";  // Enable click
   } else {
-    scrollTopBtn.style.opacity = "0.5";  // Partially visible
+    scrollTopBtn.style.opacity = "1";  // Partially visible
     scrollTopBtn.style.pointerEvents = "none";  // Prevent click when not needed
   }
 };
