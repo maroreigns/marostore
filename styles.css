@@ -77,6 +77,7 @@ span{
   position: relative;
   width: 300px;
   height: 600px;
+  overflow: hidden; /* Prevents overflow beyond the container */
 }
 
 .promo-image img {
@@ -91,8 +92,9 @@ span{
 .promo-image::before {
   content: '';
   position: absolute;
-  top: -10%;
-  left: -10%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 120%;
   height: 120%;
   border-radius: 50%;
@@ -100,7 +102,9 @@ span{
   animation: glowing 5s ease-in-out infinite alternate;
   z-index: -1;
   filter: blur(50px);
+  pointer-events: none; /* Prevents interaction issues */
 }
+
 
 /* Scroll-to-top button */
 #scrollTopBtn {
