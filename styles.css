@@ -32,6 +32,10 @@ body {
   animation: pop 1.5s ease-in-out infinite;
 }
 
+span{
+  color: #ff6347;
+}
+
 /* Promo section container */
 .promo-container {
   display: flex;
