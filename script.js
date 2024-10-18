@@ -7,11 +7,11 @@ function toggleImage(button) {
     if (img1.classList.contains('d-none')) {
       img1.classList.remove('d-none');
       img2.classList.add('d-none');
-      button.textContent = 'View Image';
+      button.textContent = 'Image One';
     } else {
       img1.classList.add('d-none');
       img2.classList.remove('d-none');
-      button.textContent = 'Back to Image';
+      button.textContent = 'Image Two';
     }
   }
   
