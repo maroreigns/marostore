@@ -109,7 +109,7 @@ span{
 /* Scroll-to-top button */
 #scrollTopBtn {
   position: fixed;
-  bottom: 330px;
+  bottom: 85px;
   right: 20px;
   background-color: blue;
   color: white;
@@ -136,12 +136,12 @@ span{
     width: 40px;
     height: 40px;
     font-size: 20px;
-    bottom: 370px;
+    bottom: 5px;
   }
 
   .policy-section {
     padding: 40px 15px;
-    max-width: 350px;
+    max-width: 200px;
     margin: auto;
 }
 }
