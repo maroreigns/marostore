@@ -96,6 +96,47 @@ span{
   #scrollTopBtn:hover {
     background-color: darkblue;
   }
+
+
+  /* footer section */
+
+  .policy-section {
+    padding: 40px 15px;
+    max-width: 900px;
+    margin: auto;
+}
+.policy-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.accordion-button:not(.collapsed) {
+    background-color: #0d6efd;
+    color: white;
+}
+.accordion-item {
+    border: none;
+    margin-bottom: 10px;
+}
+
+
+/* Social icons container */
+.social-icons {
+    display: inline-flex;
+    gap: 15px;
+  }
+  
+  /* Individual social icon */
+  .social-icon {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover effect */
+  .social-icon:hover {
+    color: #007bff;
+  }
   
   @media (max-width: 600px) {
     #scrollTopBtn {
