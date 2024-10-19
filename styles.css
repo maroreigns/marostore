@@ -136,8 +136,14 @@ span{
     width: 40px;
     height: 40px;
     font-size: 20px;
-    bottom: 120px;
+    bottom: 370px;
   }
+
+  .policy-section {
+    padding: 40px 15px;
+    max-width: 350px;
+    margin: auto;
+}
 }
 
 /* Keyframes for animations */
