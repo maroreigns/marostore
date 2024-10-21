@@ -208,6 +208,15 @@ span{
   cursor: pointer;
 }
 
+.card-title {
+  font-size: 20px;
+}
+
+.card-text{
+  font-size: 12px;
+  line-height: 12px;
+}
+
 .card-body {
   text-align: center;
 }
@@ -305,10 +314,6 @@ main {
 }
 
   
-
-  
-
-
 
 
   .card-title{
