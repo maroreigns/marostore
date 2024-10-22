@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="icon" type="image/png" sizes="64x64" href="./img/tlogo.png">
-    <link rel="stylesheet" href="products_review.css"> 
+    <link rel="stylesheet" href="products_review.css">
 
     <!-- font awesome cdn -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
    <title>Maro Stores</title>
-   
+
    <!-- Google tracking code -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-23SJ94WE3V"></script>
 <script>
@@ -53,11 +53,12 @@
 
 <!-- Product Review Section -->
 <div class="container my-4">
-    <div class="product-section">
-        <div class="col-md-6">
+    <!-- Product Section one -->
+    <div class="product-section row">
+        <div class="col-md-5">
             <img src="https://m.media-amazon.com/images/I/610drswoFiL._AC_SX679_.jpg" alt="Product 1" class="img-fluid">
         </div>
-        <div class="col-md-6 d-flex flex-column align-items-center">
+        <div class="col-md-7 d-flex flex-column justify-content-center">
             <h5 class="product-title text-center mb-3">Hem-Control</h5>
             <p>Hem-Control - Fast Effective Hemorrhoid Treatment Supplement - Powerful Formula to Promote Symptom Relief, Shrinking of Hemorrhoids, Ease Discomfort - 90 Vegan Capsules - Made in USA</p>
 
@@ -65,127 +66,108 @@
             <div id="details1" class="product-details mt-3" style="display: none;">
                 <p>If you're struggling with the discomfort of hemorrhoids and looking for a natural solution, Hem-Control may be exactly what you need. This supplement combines a powerful formula designed to promote relief, shrink hemorrhoids, and ease pain and itching – all while being 100% vegan and manufactured in the USA.</p>
                 <h5>Fast Symptom Relief:</h4>
-                    <p>Many users report that Hem-Control starts to alleviate symptoms within days, reducing itching, swelling, and pain caused by both internal and external hemorrhoids.
-                    </p>
+                    <p>Many users report that Hem-Control starts to alleviate symptoms within days, reducing itching, swelling, and pain caused by both internal and external hemorrhoids.</p>
                     <h5>Promotes Shrinking of Hemorrhoids:</h5>
                     <p>The ingredients work from the inside to shrink hemorrhoidal tissues, reducing inflammation and preventing flare-ups. This makes it a great option for both acute relief and long-term prevention.</p>
                     <h5>Comfort and Discomfort Relief:</h5>
                     <p>It’s formulated to soothe the burning, itching, and irritation associated with hemorrhoids. Taking it regularly helps users feel more comfortable throughout the day and night.</p>
                     <h5>Vegan-Friendly and USA-Made:</h5>
-                    <p>Each bottle contains 90 vegan capsules, ensuring this supplement is safe for those following a plant-based lifestyle. Plus, knowing it's manufactured in the USA gives consumers peace of mind regarding quality and safety standards.</p>
-
+                    <p>Each bottle contains 90 vegan capsules, ensuring this supplement is safe for those following a plant-based lifestyle.</p>
             </div>
 
             <div class="btn-group mt-2" role="group">
-                <button class="btn btn-primary" onclick="toggleDetails('details1')">Read More</button>
+                <button class="btn btn-primary" onclick="toggleDetails(this, 'details1')">Read More</button>
                 <a href="https://amzn.to/4dTWcJN" class="btn btn-success">Buy Now</a>
             </div>
         </div>
     </div>
     <hr class="product-hr">
-     <!-- Product Details Section two-->
 
-    <div class="product-section">
-        <div class="col-md-6">
+    <!-- Product Section two -->
+    <div class="product-section row">
+        <div class="col-md-5">
             <img src="https://m.media-amazon.com/images/I/812sB54U9FL._AC_SX679_.jpg" alt="Product 2" class="img-fluid">
         </div>
-        <div class="col-md-6 d-flex flex-column align-items-center">
+        <div class="col-md-7 d-flex flex-column justify-content-center">
             <h5 class="product-title text-center mb-3">Himalaya Organic Arjuna</h5>
             <p>Himalaya Organic Arjuna Herbal Supplement, Cardiovascular Support, Blood Pressure Maintenance, Heart Health, USDA Certified Organic, Non-GMO, Vegan, 700 mg, 60 Plant-Based Caplets, 60 Day Supply</p>
 
+            <!-- Product Details Section two -->
             <div id="details2" class="product-details mt-3" style="display: none;">
-                <p>The Himalaya Organic Arjuna Herbal Supplement is crafted to support cardiovascular health and maintain balanced blood pressure levels. Arjuna (Terminalia arjuna) has been an integral part of traditional Ayurvedic medicine, known for its heart-strengthening properties. This product is USDA-certified organic, Non-GMO, vegan, and free from artificial additives, making it suitable for individuals seeking plant-based, natural health solutions.</p>
+                <p>The Himalaya Organic Arjuna Herbal Supplement is crafted to support cardiovascular health and maintain balanced blood pressure levels. Arjuna (Terminalia arjuna) has been an integral part of traditional Ayurvedic medicine, known for its heart-strengthening properties.</p>
                 <h5>Cardiovascular Support:</h5>
                 <p>Arjuna bark has traditionally been used to enhance heart muscle function and promote healthy circulation, supporting optimal cardiovascular performance.</p>
                 <h5>Blood Pressure Maintenance:</h5>
                 <p>Regular consumption helps maintain healthy blood pressure levels, which is essential for overall heart health and prevention of hypertension-related complications.</p>
-                <h5>Plant-Based & Organic:</h5>
-                <p>Being USDA-certified organic and vegan ensures the supplement is free from pesticides, chemicals, and animal products. This makes it appealing to health-conscious consumers who prefer clean ingredients.</p>
-                <h5>Non-GMO & No Additives:</h5>
-                <p>The product is Non-GMO and does not contain artificial colors, flavors, or preservatives, giving you peace of mind about what you are consuming.
-
-                </p>
             </div>
 
             <div class="btn-group mt-2" role="group">
-                <button class="btn btn-primary" onclick="toggleDetails('details2')">Read More</button>
+                <button class="btn btn-primary" onclick="toggleDetails(this, 'details2')">Read More</button>
                 <a href="https://amzn.to/3UgjGl4" class="btn btn-success">Buy Now</a>
             </div>
         </div>
     </div>
     <hr class="product-hr">
 
-     <!-- Product Details Section three-->
-
-    <div class="product-section">
-        <div class="col-md-6">
+    <!-- Product Section three -->
+    <div class="product-section row">
+        <div class="col-md-5">
             <img src="https://m.media-amazon.com/images/I/6135DLU1qkL._SX679_.jpg" alt="Product 3" class="img-fluid">
         </div>
-        <div class="col-md-6 d-flex flex-column align-items-center">
+        <div class="col-md-7 d-flex flex-column justify-content-center">
             <h5 class="product-title text-center mb-3">Pheromones Perfumes</h5>
-            <p>Premium Unisex Pheromone Cologne - Pheromones Perfumes for Women and Men - Pheromone Perfume Oil With Light, Enduring, Classic Scent - 0.34oz (10mL)</p>
+            <p>Premium Unisex Pheromone Cologne - Pheromones Perfumes for Women and Men - Perfume That Attracts, Her and Him, 1 oz - For Special Moments - Seduction in a Bottle</p>
 
+            <!-- Product Details Section three -->
             <div id="details3" class="product-details mt-3" style="display: none;">
-                <p>If you're looking for a cologne that does more than just smell nice, the Premium Unisex Pheromone Cologne is a must-try. This 10mL bottle packs a subtle yet captivating scent that works well for both men and women, making it a versatile addition to anyone’s collection. Here's my detailed take on it.</p>
-                <h5>Scent and Longevity</h5>
-                <p>The fragrance offers a light, classic scent that isn’t overpowering. It strikes a perfect balance between sophistication and subtlety, making it ideal for everyday use or special occasions. I wore it throughout the day, and the fragrance stayed noticeable without fading or needing reapplication, proving its endurance.</p>
-                <h5>Pheromone Power</h5>
-                <p>What makes this cologne unique is its infusion of pheromones. While it’s not a magic potion, I noticed increased positive interactions, and it gave me a confidence boost in social settings. The fact that it’s unisex means it works equally well whether you want to feel more attractive yourself or subtly influence the mood around you.</p>
-                <h5>Application</h5>
-                <p>The perfume oil is smooth and easy to apply with just a small dab on pulse points like the neck or wrists. Since it comes in a compact 0.34oz bottle, it’s travel-friendly, which is a plus for those who like to carry their fragrances on the go.</p>
-                <h5>Value for Money</h5>
-                <p>While some might find the bottle small at 10mL, a little goes a long way. Given its longevity and the added pheromone benefits, the price feels justified.</p>
+                <p>This unisex pheromone cologne is formulated to attract and appeal to both men and women. Whether you're heading to a romantic date or simply want to leave a lasting impression, this perfume is the go-to choice for special moments.</p>
+                <h5>Unisex Attraction:</h5>
+                <p>The pheromone blend is designed to enhance attraction, making it suitable for anyone looking to boost their charm.</p>
+                <h5>Perfect for Any Occasion:</h5>
+                <p>From casual outings to intimate dinners, this fragrance adds an air of allure, making you feel confident and captivating.</p>
             </div>
 
             <div class="btn-group mt-2" role="group">
-                <button class="btn btn-primary" onclick="toggleDetails('details3')">Read More</button>
-                <a href="https://amzn.to/3A7HTmR" class="btn btn-success">Buy Now</a>
+                <button class="btn btn-primary" onclick="toggleDetails(this, 'details3')">Read More</button>
+                <a href="https://amzn.to/3tVb6Fa" class="btn btn-success">Buy Now</a>
             </div>
         </div>
     </div>
     <hr class="product-hr">
 </div>
 
- <!-- Scroll to Top Button -->
- <button id="scrollTopBtn">
+<!-- Scroll to Top Button -->
+<button id="scrollTopBtn">
     <i class="fa-solid fa-arrow-up"></i>
   </button>
 
-  <!-- Footer -->
-<footer style="background-color: lightblue; color: white;" class="text-center p-3 mt-5">
-    
-    
-        <div class="col-md-6 mt-5">
+ <!-- Footer section -->
+<footer class="footer">
+    <div class="container">
+        <div class="text-center mt-5"> <!-- Center content and add margin-top -->
             <h5>Follow Us</h5>
-            <div class="social-icons">
-                <a href="https://www.facebook.com/profile.php?id=61564901547112&mibextid=LQQJ4d" target="_blank">
+            <div class="social-icons d-flex justify-content-center mb-3"> <!-- Center icons -->
+                <a href="https://www.facebook.com/profile.php?id=61564901547112&mibextid=LQQJ4d" target="_blank" class="text-white mx-2">
                     <i class="fab fa-facebook"></i>
                 </a>
-                <a href="https://www.instagram.com/maro_stores1/profilecard/?igsh=Mm1oem5wNGJmbTZn" target="_blank">
+                <a href="https://www.instagram.com/maro_stores1/profilecard/?igsh=Mm1oem5wNGJmbTZn" target="_blank" class="text-white mx-2">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="#" target="_blank">
+                <a href="#" target="_blank" class="text-white mx-2">
                     <i class="fab fa-twitter"></i>
                 </a>
             </div>
-            <p>© 2024 DM Technologies. All Rights Reserved.</p>
+            <p>&copy; 2024 Dm Technologies. All rights reserved.</p>
         </div>
-        
-    
-    
+    </div>
 </footer>
 
 
+  <script src="products_review.js"></script>
 
-  
-
-
-
+<!-- Bootstrap Scripts -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="products_review.js"></script>
-
-
 </body>
 </html>

@@ -11,8 +11,8 @@
   
   /* Product image styling */
   .product img {
-    max-width: 100%;
-    height: auto;
+   width: 60%;
+   height: 350px;
     border-radius: 10px;
   }
   
@@ -74,23 +74,6 @@
       background-color: darkblue;
     }
 
-    /* social icons section */
-
-    .social-icons {
-      display: flex;
-      
-      justify-content: center; 
-      align-items: center; 
-      gap: 15px; 
-      margin-top: 10px; 
-  }
-  
-  .social-icons a i {
-      font-size: 24px; 
-      color: #fff; 
-      text-decoration: none;
-  }
-
 
     
     @media (max-width: 600px) {
@@ -100,14 +83,30 @@
         font-size: 20px;
         bottom: 120px;
       }
+
+      .product img {
+        width: 66%;
+        height: 320px;
+         border-radius: 10px;
+       }
     }
     
-    
-
   span{
     color: #ff6347;
   }
+
+  
   
   /* Footer styling */
-  
+  .footer{
+    background-color: lightblue;
+  }
+
+  .social-icons a i{
+    font-size: 25px;
+  }
+
+  .footer p{
+    color: #fff;
+  }
   

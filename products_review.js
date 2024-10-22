@@ -1,35 +1,19 @@
-function toggleDetails(detailId) {
-    const details = document.getElementById(detailId);
-    if (details.style.display === "none" || details.style.display === "") {
-        details.style.display = "block";
-    } else {
-        details.style.display = "none";
+//  JavaScript for "Read More" Toggle 
+
+    function toggleDetails(button, detailsId) {
+        const detailsElement = document.getElementById(detailsId);
+        if (detailsElement.style.display === 'none') {
+            detailsElement.style.display = 'block';
+            button.innerText = 'Read Less';
+        } else {
+            detailsElement.style.display = 'none';
+            button.innerText = 'Read More';
+        }
     }
-}
 
-// products_review.js
 
-function toggleDetails(detailsId) {
-    const detailsElement = document.getElementById(detailsId);
-    if (detailsElement.style.display === "block") {
-        detailsElement.style.display = "none";
-    } else {
-        detailsElement.style.display = "block";
-    }
-}
 
-// Change navbar background on scroll
-window.addEventListener('scroll', function () {
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
-
-// scroll to top function
-
+    // scroll to top function
 window.onscroll = function () {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
       scrollTopBtn.style.opacity = "1";  // Fully visible
@@ -44,9 +28,18 @@ window.onscroll = function () {
   scrollTopBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
-
-
-  
   
 
+    // Get the navbar element
+const navbar = document.querySelector('.navbar');
 
+// Add a scroll event listener to the window
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add('navbar-scrolled');
+  } else {
+    navbar.classList.remove('navbar-scrolled');
+  }
+});
+  
+  
