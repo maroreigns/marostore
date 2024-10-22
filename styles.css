@@ -286,15 +286,15 @@ main {
 
 @media (max-width: 480px) {
   .promo-text h1 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
    
   }
 
   .promo-text p {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
   }
   .promo-image {
-    width: 200px;
+    width: 220px;
     height: 400px;
   }
   .card-img-container img {
