@@ -48,6 +48,7 @@ window.onscroll = function () {
 scrollTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+console.log
 
 
 
