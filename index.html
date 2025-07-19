@@ -1,1084 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maro Stores</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-   <!-- favicon image -->
-  <link rel="icon" type="image/png" sizes="64x64" href="./img/mslogo.jpg">
-
-  <!-- font awesome cdn -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  
-  <link rel="stylesheet" href="styles.css">
-
-  <!-- Google tracking code tag -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-23SJ94WE3V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-23SJ94WE3V');
-</script>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8327568277723275"
-  crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MaroStores</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800 scroll-smooth">
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">MARO<span>STORES</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About Us</a>
-          </li>
-           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
+  <!-- Header -->
+  <header id="header" class="fixed top-0 w-full z-50 transition-all duration-300 bg-white shadow">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold">MARO<span>STORES</span></h1>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#home" class="hover:text-blue-500">Home</a>
+        <a href="#products" class="hover:text-blue-500">Products</a>
+        <a href="#testimonials" class="hover:text-blue-500">Testimonials</a>
+        <a href="#newsletter" class="hover:text-blue-500">Newsletter</a>
+      </nav>
+      <button id="navToggle" class="md:hidden">☰</button>
     </div>
-  </nav>
-
-  <div class="promo-container">
-    <div class="promo-text">
-      <h1>Shop Smarter,<br>Live Better<br><span>EXPLORE</span><br>Our Exclusive Deals Today!</h1>
-      <p>Discover the future of online shopping with Marostores! We offer a wide range of quality products – from 
-        fashion, electronics, and home essentials to beauty and personal care – all at unbeatable prices.
-      </p>
+    <div id="mobileMenu" class="hidden md:hidden px-4 pb-4 space-y-2 bg-white">
+      <a href="#home" class="block">Home</a>
+      <a href="#products" class="block">Products</a>
+      <a href="#testimonials" class="block">Testimonials</a>
+      <a href="#newsletter" class="block">Newsletter</a>
     </div>
-    <div class="promo-image">
-      <img src="./img/pug.png" alt="Phone displaying product" />
-    </div>
-  </div>
+  </header>
 
-  <!-- Product Section -->
-  <section class="container mt-5">
-    <div class="headertext">
-      <h1 class="h1">Welcome to Maro's Stores</h1>
-      <p class="ptext">Discover amazing products and deals below!</p>
-      <h1 class="popup-text">AMAZING DEALS!</h1>
-    </div>
-
-    <div class="row">
-      <!-- Product Card 1 -->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/61VwfUI+-eL._AC_SX679_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/71C6ZXBdNDL._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">iPhone Wireless Charger</h5>
-            <p class="card-text">3 in 1 Charging Station for iPhone, Wireless Charger for iPhone 16 15 14 13 12 11 X Pro Max & Apple Watch - Wireless Charging Station for AirPods 4 3 Pro</p>
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/3Wuz7as" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card 2 -->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/815HZLkZfgL._AC_SX679_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/61KAoQOvRXL._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Wireless Microphone</h5>
-            <p class="card-text">Wireless Microphone for iPhone, iPad, Android, Lavalier Microphone for Video Recording - 2 Pack iPhone Mic Crystal Clear Recording with USB-C for Podcast Microphone, ASMR, TikTok</p>
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/3BNGd2q" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card 3 -->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/712E+uR1yGL._AC_SY300_SX300_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/71pQX1sCcsL._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Hagibis 21 inch Ring Light</h5>
-            <p class="card-text">Hagibis 21 inch Ring Light with Stand Outer 55W 5600k Dimmable LED Light, Tripod Stand,and Phone Holder，Remote Controller,Carrying Bag ，CRI 97+ 2540lux, for Streaming Home Office Zoom Call Lighting</p>
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/3BZbejS" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card 4 -->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/81i2S1q+wDL._AC_SX679_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/81zhDSezeLL._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">GuruNanda Teeth Whitening</h5>
-            <p class="card-text">GuruNanda Teeth Whitening Strips -16 Day Treatments - Enamel-Safe Teeth Whitening for Sensitive Teeth, Non-Slip, Dry Strip Technology</p>
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/4f5AMe9" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card 5 -->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/61cWaLA-MdL._SX679_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/91FU-rE-XOL._SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Keranique Hair Mask</h5>
-            <p class="card-text">Keranique Hair Mask: Deep Repair & Hydration for Dry, Damaged Hair - Keratin Protein Boost for Fine Strands - Intense Moisturizer for Women</p>
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/40cFstL" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-       <!-- Product Card 6 -->
-       <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/71KNG60InzL._SX679_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/81Erax5wn7L._SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">RoC Retinol Correxion</h5>
-            <p class="card-text">RoC Retinol Correxion Max Daily Hydration Anti-Aging Face Moisturizer with Hyaluronic Acid, 1.7 Fl Oz Skin Care Cream (Pack of 1)</p>
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/4ferrAh" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-       <!-- Product Card  7-->
-       <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/51OWq0JeQDL._AC_SX679_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/61b6j4mDMPL._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">FENIFOX Bluetooth Mouse</h5>
-            <p class="card-text">FENIFOX Bluetooth Mouse Slim Mini Whisper-Quiet Flat Portable Wireless Mice Rechargeable Compatible with Laptop,PC,Tablet Android Windows XP(Black)</p>
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/3C3hDuk" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-       <!-- Product Card  8-->
-       <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/71L42CoODhL._AC_SX679_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/71tufGGLkvL._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Baseus USB C to HDMI Adapter</h5>
-            <p class="card-text">Baseus USB C to HDMI Adapter, 4K@60Hz USB C Docking Station, 7 in 1 USB C Hub with 3 USB-A, PD 100W, TF/SD Card Reader, USB C Dock Compatible for iPhone 15/Mac/Dell/Acer/HP/ASUS/Steam Deck/Rog Ally</p>
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/3NvzRqS" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-       <!-- Product Card  9-->
-       <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/61iPzD8F+sL._AC_SX679_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/61G6EINOzfL._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">iPhone 14 13 12 11 Fast Charger</h5>
-            <p class="card-text">iPhone 14 13 12 11 Fast Charger USB C Wall Charger [2-Pack] 6FT Fast Charging Cable Compatible with iPhone 14/14 Pro/14 Pro Max/iPhone 13/12/11/X/8/7/6/iPad Pro/Mini/AirPods</p>
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/4dRvLnR" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-      <!-- Product Card  10-->
-
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/41+1Csr1pSL._AC_SX679_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/61V52s8z8eL._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">JBL Vibe Beam</h5>
-            <p class="card-text">JBL Vibe Beam - True Wireless JBL Deep Bass Sound Earbuds, Bluetooth 5.2, Water & Dust Resistant, Hands-free call with VoiceAware, Up to 32 hours of battery life (Black)</p>
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/3YuNLQn" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-       <!-- Product Card  11-->
-       <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/51t0IE0zjaL._AC_SX679_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/71ei-AADVYL._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Beats Studio Pro</h5>
-            <p class="card-text">Beats Studio Pro - Wireless Bluetooth Noise Cancelling Headphones - Personalized Spatial Audio, USB-C Lossless Audio, Apple & Android Compatibility, Up to 40 Hours Battery Life - Sandstone</p>
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/3A6cXmY" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-      <!-- Product Card  11-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/41yzKby1BJL._AC_SX679_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/51lMjq915WL._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title"> Power Adapter</h5>
-            <p class="card-text">Sewell MOS Reach C Power Adapter with 60 W USB C Port + 3 USB A Ports (SW-42850-Family)</p>
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/4eSpABi" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card  12-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/71BE9mg4xRL._SY522_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/71BE9mg4xRL._SY522_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Hidden Potential</h5>
-            <p class="card-text">Hidden Potential: The Science of Achieving Greater Things Hardcover – October 24, 2023
-              by Adam Grant (Author)</p>
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/3Y8BRue" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-       <!-- Product Card  13-->
-       <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/71QUeImHBZL._SY522_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/71QUeImHBZL._SY522_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">The Law of Success</h5>
-            <p class="card-text"> The Law of Success: The Master Wealth-Builder's Complete and Original Lesson Plan for Achieving Your Dreams Paperback – Illustrated, December 26, 2008</p>
-              
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/3UfB3md" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card  14-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/61CIKpN5QjL._SY522_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/61CIKpN5QjL._SY522_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Think and Grow Rich</h5>
-            <p class="card-text">Think and Grow Rich: The Landmark Bestseller Now Revised and Updated for the 21st Century (Think and Grow Rich Series) Paperback – December 15, 2007</p>
-              
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/3BVHpRp" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card  15-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/81HqVRRwp3L._SY522_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/81HqVRRwp3L._SY522_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Eloquent JavaScript, 3rd Edition</h5>
-            <p class="card-text">Eloquent JavaScript, 3rd Edition: A Modern Introduction to Programming Paperback – December 4, 2018
-              by Marijn Haverbeke (Author)</p>
-              
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/4dZ077U" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card  16-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/61Bnzr3PdCL._SY522_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/61Bnzr3PdCL._SY522_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Python QuickStart Guide</h5>
-            <p class="card-text">Python QuickStart Guide: The Simplified Beginner's Guide to Python Programming Using Hands-On Projects and Real-World Applications (Coding & Programming - QuickStart Guides)</p>
-              
-              
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/40dUaRA" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card  17-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/61KFmcmEK1L._SY522_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/61KFmcmEK1L._SY522_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Learn Java in One Day</h5>
-            <p class="card-text">Java: Learn Java in One Day and Learn It Well. Java for Beginners with Hands-on Project. (Learn Coding Fast with Hands-On Project)</p>
-              
-              
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/3UdazSs" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card  18-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/711kTQNwn0L._AC_SX695_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/711kkfVgiwL._AC_SY695_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">4PCS Women Fashion Handbags</h5>
-            <p class="card-text">4PCS Women Fashion Handbags Purses Wallet Tote Shoulder Bags Casual Crossbody Bags, Best Valentine's Day Gift for Ladies Girls, Satchel Purse Set 4pcs</p>
-              
-              
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/40cuTan" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      
-      <!-- Product Card  19-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/61fQCwHhVCL._AC_SY695_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/71lYoSpCBmL._AC_SY695_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">LOVEVOOK Purse</h5>
-            <p class="card-text">LOVEVOOK Purse for Women Leather Tote Bag Purse and Handbags, Satchel Shoulder Crossbody Top Handle Bags with Zipper</p>
-              
-              
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/3YwxtXk" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-       <!-- Product Card  20-->
-       <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/91F2J0LXJJL._AC_SX695_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/81OkwbN2tpL._AC_SX695_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">LOVEVOOK Purse</h5>
-            <p class="card-text">LOVEVOOK Purse for Women Leather Tote Bag Purse and Handbags, Satchel Shoulder Crossbody Top Handle Bags with Zipper</p>
-              
-              
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/4faeLdF" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card  21-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/71tN-OGIxfL._SX679_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/71QNrD6-CqL._SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Vans Unisex</h5>
-            <p class="card-text">Vans Unisex Authentic Skate Shoe Black 10 D(M) US</p>
-              
-              
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/4hdNMzt" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card  22-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/61vKE-TW2UL._AC_SY695_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/71fT88qLM7L._AC_SY695_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Feethit Mens</h5>
-            <p class="card-text">Feethit Mens Non Slip Walking Sneakers Lightweight Breathable Slip on Running Shoes Athletic Gym Tennis Shoes for Men</p>
-            
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/3Ycnntu" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card  23-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/91hl+nIS-3L._AC_SY695_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/61pKJSBdAJL._AC_SY695_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">TSIODFO Men Sneakers</h5>
-            <p class="card-text">TSIODFO Men Sneakers Fashion Sport Running Athletic Tennis Walking Shoes</p>
-            
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/3A2S5x3" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card  24-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/71il5ScVmtL._AC_SX679_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/71nWtqaMqwL._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Silicone Kitchen Utensils Set</h5>
-            <p class="card-text">Silicone Kitchen Utensils Set, 46 pcs Cooking Utensils Set-Silicone Spatula Set- Kitchen Gadgets and Tools with Holder-Wooden Handle Silicone Kitchen Utensil with Tongs,Grater (Khaki)</p>
-            
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/4e02KXh" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card  25-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/810-Vjbu98L._AC_SX679_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/81lE6zFAWoL._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Mueller Pro-Series All-in-One</h5>
-            <p class="card-text">Mueller Pro-Series All-in-One, 12 Blade Mandoline Slicer for Kitchen, Food Chopper, Vegetable Slicer and Spiralizer, Cutter, Dicer, Grater, Kitchen Gadgets Sets with Container, White Sand/Gray</p>
-            
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/40bAUEd" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card  26-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/71XR3lo00cL._AC_SX679_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/81adAiK3NHL._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Mixing Bowls with Airtight Lids Set</h5>
-            <p class="card-text">Mixing Bowls with Airtight Lids Set, 26PCS Stainless Steel Khaki Bowls with Grater Attachments, Non-Slip Bottoms & Kitchen Gadgets Set, Size 7, 4, 2.5, 2.0,1.5, 1QT, Great for Mixing & Serving</p>
-            
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/48pGULx" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card  27-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/71ckBSptd3L._AC_SX679_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/713Q9uUFJIL._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">TUYU Electric Spin Scrubber</h5>
-            <p class="card-text">TUYU Electric Spin Scrubber, 2024 New Full-Body IPX7 Waterproof Bathroom Scrubber with Power LCD Display, Adjustable Extension Handle, Cordless Electric Cleaning Brush for Bathroom, Kitchen Cleaning</p>
-            
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/3Yz0Po0" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card  28-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/81J8n5lH8nL._AC_SX679_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/718jvFvApVL._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Dusters for Cleaning</h5>
-            <p class="card-text">Dusters for Cleaning, Retractable Microfiber Gap Dust Cleaner with Extension Pole 30'' to 100'', Reusable Bendable Long Handle Feather Duster Kit for Cleaning High Ceiling Fan, Furniture, Blinds, Car</p>
-            
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/4dVdNkn" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card  29-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/71nUqdYTtVL._AC_SX679_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/81EuLfA0TTL._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Natural Multi-Surface</h5>
-            <p class="card-text">Natural Multi-Surface Handheld Steam Cleaner with 10 Accessories, 13OZ Pressurized Multipurpose On Demand Steam Cleaner for Home, Steamer for Cleaning Dirt, Grease, Grout, Tile, Floor, Couch and Car</p>
-            
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/3NBHYSU" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-       <!-- Product Card  30-->
-       <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/61RclLQJfgL._AC_SX679_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/71d1Dzvx+gL._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Taygeer Travel Laptop</h5>
-            <p class="card-text">Taygeer Travel Laptop Backpack for Men Women, Airplane Approved Travel Backpack Suitcase with Usb Charging Port, Lightweight College 35l Luggage Bag 15.6inch Laptop Backpack Gifts for Business,Black</p>
-            
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/3Abbj3G" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-       <!-- Product Card  31-->
-       <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/71-imdZfpIL._AC_SX679_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/6169IiaIUBL._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">MOSISO Laptop Shoulder Bag</h5>
-            <p class="card-text">MOSISO Laptop Shoulder Bag Compatible with MacBook Air 15 inch M3 M2 2024 2023/Pro 16 M3 M2 M1 2024-2019,15-15.6 inch Notebook with 2 Raised&1 Flapover&1 Horizontal Pocket&Handle&Belt, Black</p>
-            
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/4hjsO2f" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-       <!-- Product Card  32-->
-       <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/81WjalMN8mL._AC_SX679_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/71seGbdhdXL._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">MATEIN Travel Laptop Backpack</h5>
-            <p class="card-text">MATEIN Travel Laptop Backpack, Business Anti Theft Slim Sturdy Laptops Backpack with USB Charging Port, Water Resistant College School Computer Bag Gift for Men & Women Fits 15.6 Inch Notebook, Grey</p>
-            
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/3YfDwye" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card  33-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/71yCCVl+9RS._AC_SX679_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/814IajvTZyS._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Stylish Blue Light</h5>
-            <p class="card-text">Stylish Blue Light Blocking Glasses for Women or Men - Ease Computer and Digital Eye Strain, Dry Eyes, Headaches and Blurry Vision - Instantly Blocks Glare from Computers and Phone Screens w/Case</p>
-            
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/40ggvOf" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card  34-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/61AA0Wd3VAL._AC_SX679_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/71nAJr4MguL._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Blue Light Glasses For Woman/Men</h5>
-            <p class="card-text">Blue Light Glasses For Woman/Men Blue Light Blocking Glasses, Retro Round Anti Eyestrain Computer Glasses</p>
-            
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/3YiQwTx" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card  35-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/71ZPKI5o7FL._AC_SX679_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/71RkwMkB6XL._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Przene 3 Pack Blue Light</h5>
-            <p class="card-text">Przene 3 Pack Blue Light Blocking Glasses Women/Men,Retro Round Computer Glasses Anti Eye Strain/UV/Glare, Gaming Glasses. (Black/Crystal/Amber)</p>
-            
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/4eQ5qI4" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      
-      <!-- Product Card  36-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/51m9FoHWpcL._AC_SX679_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/51-7hl3dSeL._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">yobola Wireless Earbuds</h5>
-            <p class="card-text">yobola Wireless Earbuds, Bluetooh Earbuds, Deep Bass Light Weight Mini Wireless Headphones for Running/Fitness, 25Hrs Playtime, Built-in Microphone, Touch Control, IPX5 Waterproof</p>
-            
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/40iffKp" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      
-      <!-- Product Card  37-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/51GbU4yIv4L._AC_SX679_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/51HgqYGsAnL._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Soundcore by Anker</h5>
-            <p class="card-text">Soundcore by Anker P20i True Wireless Earbuds, 10mm Drivers with Big Bass, Bluetooth 5.3, 30H Long Playtime, Water-Resistant, 2 Mics for AI Clear Calls, 22 Preset EQs, Customization (Blue)</p>
-            
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/48mD06j" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      
-      <!-- Product Card  38-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/71h+kOBUWqL._AC_SX679_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/61got3YTqhL._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Wireless Earbuds Bluetooth</h5>
-            <p class="card-text">Wireless Earbuds Bluetooth 5.3 Headphones Bass Stereo Ear Buds with Noise Cancelling Mic LED Display in Ear Earphones IP7 Waterproof 36H Playtime for Laptop Pad Phones Sports Workout Rose Gold</p>
-            
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/4e1xFCk" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card  39-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/61gKkYQn6lL._AC_SX679_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/81w4nBxLSyL._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Acer Aspire 3 A315-24P-R7VH Slim Laptop</h5>
-            <p class="card-text">Acer Aspire 3 A315-24P-R7VH Slim Laptop | 15.6" Full HD IPS Display | AMD Ryzen 3 7320U Quad-Core Processor | AMD Radeon Graphics | 8GB LPDDR5 | 128GB NVMe SSD | Wi-Fi 6 | Windows 11 Home in S Mode</p>
-            
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/4e6e97H" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card  40-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/71ZJqrIoNHL._AC_SX679_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/71Or+U1uzYL._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">AOC Newest 15.6" Laptop</h5>
-            <p class="card-text">AOC Newest 15.6" Laptop, Intel Quad-Core Processor (Up to 3.6GHz), 16GB RAM, 512GB SSD, Windows 11 Laptops Computer, FHD Screen, Webcam, Light&Thin, Metal Shell, HDMI, Type-C, USB3.2 (2024 Flagship)</p>
-            
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/3YizuVQ" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card  41-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/710FGebBqUL._AC_SX679_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/7152UllYOBL._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Traditional Laptops 6GB</h5>
-            <p class="card-text">14" Traditional Laptops 6GB LPDDR4 256GB SSD Support 1TB SSD Expand Laptop Celeron Up to 2.8Ghz Win 11 Full Metal 2.4G+5G WiFi BT 4.2 1920x1080 FHD Webcam for Work Study Entertainment-Gold</p>
-            
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/3YcaGP2" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card  42-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/71BoR8jR-ML._AC_SY695_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/81m187uVVyL._AC_SY695_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Women Foam House Slippers</h5>
-            <p class="card-text">EverFoams Women's Fuzzy Slip-on Slippers Warm Cozy Soft Lightweight Memory Foam Indoor House Shoes</p>
-            
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/4fh925I" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card  43-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/71gyNWRJBCL._AC_SY695_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/71OndJDe3wL._AC_SY695_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Women Foam House Slippers</h5>
-            <p class="card-text">EverFoams Women's Microsuede Slippers Comfy Memory Foam Non-slip Indoor House Shoes with Fuzzy Collar</p>
-            
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/3YopsT3" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card  44-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/71EnzIKTTiL._AC_SY695_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/81Z79stFklL._AC_SY695_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Women Foam House Slippers</h5>
-            <p class="card-text">EverFoams Womens Fuzzy Open-toe Slippers Soft Comfy Memory Foam Indoor House Shoes</p>
-            
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/48q1BqK" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card  45-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/81tVr8+qRVL._AC_SY695_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/81-cclZB+eL._AC_SY695_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Men Foam House Slippers</h5>
-            <p class="card-text">VeraCosy Men's Two-Tone Memory Foam House Slippers Indoor Outdoor Durable Rubber Sole</p>
-            
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/3Ur2rOb" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card  46-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/81aC7hmU9mL._AC_SY695_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/71Dqq4UrPmL._AC_SY695_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">DL Men's Memory Foam Moccasin Slippers</h5>
-            <p class="card-text">DL Men's Memory Foam Moccasin Slippers Breathable Moccasin Slippers Micro Wool House Shoes Anti-Slip Sole Indoor Outdoor</p>
-            
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/4eZOIGm" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card  47-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/71VDFTRC-5L._AC_SY695_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/7165MdFXqyL._AC_SY695_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Zigzagger Men's Slippers</h5>
-            <p class="card-text">Zigzagger Men's Slip On Moccasin Slippers, Indoor/Outdoor Warm Fuzzy Comfy House Shoes, Fluffy Wide Loafer Slippers</p>
-            
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/48oC6pE" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card  48-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/61x5fvmyaaL._AC_SY879_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/61pLEU3I4mL._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Nutricost Creatine</h5>
-            <p class="card-text">Nutricost Creatine Monohydrate Micronized Powder 500G, 5000mg Per Serv (5g) - Micronized Creatine Monohydrate, 100 Servings, 17.637 Ounes</p>
-            
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/4f32QhU" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card  49-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/51TOhmDTg6L._AC_SX679_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/51M9kORVqcL._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">THORNE Creatine</h5>
-            <p class="card-text">THORNE Creatine - Creatine Monohydrate, Amino Acid Powder - Support Muscles, Cellular Energy and Cognitive Function - Gluten-Free, Keto - NSF Certified for Sport - 16 Oz - 90 Servings</p>
-            
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/4foOlF3" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Card  50-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/61Tc7SOflkL._AC_SY879_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/71tkqCk5FgL._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">BulkSupplements</h5>
-            <p class="card-text">BulkSupplements.com Creatine Monohydrate Powder - Creatine Supplement, Micronized Creatine, Creatine Powder - Unflavored & Gluten Free, 5g (5000mg) per Servings, 500g (1.1 lbs) (Pack of 1)</p>
-            
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/3YrA7wh" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-      <!-- Product Card  50-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/610qrUKabHL._AC_SX679_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/71RB+kXWdOL._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Smart Watch</h5>
-            <p class="card-text">Smart Watch, 1.83" HD Smartwatch for Men Women (Answer/Make Calls), Fitness Watch with 100+ Sport Modes, IP68 Waterproof/Heart Rate/Sleep Monitor, Activity Trackers for iOS/Android (Black)</p>
-            
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/3CyvwkS" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-      <!-- Product Card  51-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/71NiE-BNlFL._AC_SX569_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/51BZYfCLNtL._AC_SX569_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Amazon Echo Pop</h5>
-            <p class="card-text">Amazon Echo Pop (newest model), Full sound compact smart speaker with Alexa, Glacier White</p>
-            
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/4hoVExu" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-      <!-- Product Card  52-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-container">
-            <img src="https://m.media-amazon.com/images/I/61urxjK6SbL.__AC_SX300_SY300_QL70_FMwebp_.jpg" class="card-img-top img1" alt="Product Image 1">
-            <img src="https://m.media-amazon.com/images/I/71XnlNUmPQL._AC_SX679_.jpg" class="card-img-top img2 d-none" alt="Product Image 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Stainless Steel Electric Kettle</h5>
-            <p class="card-text">COMFEE' Stainless Steel Electric Kettle, 1.7 Liter Tea Kettle Electric & Hot Water Kettle, 1500W Fast Boil with LED Light, Auto Shut-Off and Boil-Dry Protection</p>
-            
-            <button class="btn btn-primary" onclick="toggleImage(this)">Image One</button>
-            <a href="https://amzn.to/3CazJeJ" class="btn btn-success">Buy Now</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    
+  <!-- Hero -->
+  <section id="home" class="pt-24 text-center bg-gradient-to-r from-blue-100 to-purple-100 py-20">
+    <h2 class="text-4xl font-bold mb-4">Buy & Download Digital Products Easily</h2>
+    <p class="mb-6">Templates, eBooks, Courses – Instant Access. Instant Impact.</p>
+    <a href="#products" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Browse Products</a>
   </section>
 
-   <!-- Scroll to Top Button -->
-   <button id="scrollTopBtn">
-    <i class="fa-solid fa-arrow-up"></i>
-  </button>
-
-<!-- Privacy Policy and Terms Section -->
-  <main>
-    <div class="container my-5">
-        <div class="row">
-            <div class="col-md-6 mt-5"> 
-                <h5>Privacy Policy & Terms of Service</h5>
-                <div class="accordion" id="policyAccordion">
-                    <!-- Privacy Policy -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="privacyHeading">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-                                data-bs-target="#privacyCollapse" aria-expanded="false" aria-controls="privacyCollapse">
-                                Privacy Policy
-                            </button>
-                        </h2>
-                        <div id="privacyCollapse" class="accordion-collapse collapse" 
-                            aria-labelledby="privacyHeading" data-bs-parent="#policyAccordion">
-                            <div class="accordion-body">
-                                <p>Welcome to Maro stores affiliate website. Your privacy is important to us. Since we do not collect personal information such as names, emails, or passwords, you can browse with confidence.</p>
-                                <p>We use affiliate links to recommend products, and these links may lead to third-party websites that have their own privacy policies. Please review those policies to understand how they collect and use your information.</p>
-                                <p>Our site may collect basic anonymous analytics data (e.g., number of visitors) to improve the user experience. However, no personally identifiable information (PII) is captured.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Terms of Service -->
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="termsHeading">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-                              data-bs-target="#termsCollapse" aria-expanded="false" aria-controls="termsCollapse">
-                              Terms of Service
-                          </button>
-                      </h2>
-                      <div id="termsCollapse" class="accordion-collapse collapse" 
-                          aria-labelledby="termsHeading" data-bs-parent="#policyAccordion">
-                          <div class="accordion-body">
-                              <p>By accessing this affiliate website, you agree to be bound by the following terms and conditions:</p>
-                              <ul>
-                                  <li>You use this site at your own risk. We are not liable for any direct or indirect damages that may arise from the use of our affiliate links or products purchased through them.</li>
-                                  <li>Product descriptions and prices are subject to change without notice. Please refer to the vendor's website for the latest details.</li>
-                                  <li>We are not responsible for the availability or functionality of third-party websites linked from our site.</li>
-                                  <li>Any dispute arising from the use of our site shall be governed by the laws applicable in Nigeria.</li>
-                              </ul>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-            </div>
-
-            <!-- Social Media Links Section -->
-            <div class="col-md-6 text-center text-md-end mt-5"> <!-- Added mt-5 -->
-                <h5>Follow Us</h5>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/profile.php?id=61564901547112&mibextid=LQQJ4d" target="_blank" class="text-white">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                    <a href="https://www.instagram.com/maro_stores1/profilecard/?igsh=Mm1oem5wNGJmbTZn" target="_blank" class="text-white">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" target="_blank" class="text-white">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
-<!-- footer -->
-
-<footer class="footer">
-  <div class="container">
-      <div class="text-center">
-          <p>&copy; 2024 Dm Technologies. All rights reserved.</p>
+  <!-- Products -->
+  <section id="products" class="py-16 max-w-7xl mx-auto px-4">
+    <h3 class="text-2xl font-bold text-center mb-10">Our Digital Products</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white shadow-lg rounded-lg p-4" data-aos="fade-up">
+        <img src="https://via.placeholder.com/300x200" class="w-full rounded" alt="Product 1">
+        <h4 class="font-semibold mt-4">Ebook: Productivity Mastery</h4>
+        <p class="text-sm text-gray-600">Unlock your potential with time-tested strategies.</p>
+        <button class="buy-btn bg-blue-600 text-white px-4 py-2 mt-4 rounded" data-id="1">Buy Now</button>
       </div>
-  </div>
-</footer>
+      <div class="bg-white shadow-lg rounded-lg p-4" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://via.placeholder.com/300x200" class="w-full rounded" alt="Product 2">
+        <h4 class="font-semibold mt-4">Course: Web Dev Starter</h4>
+        <p class="text-sm text-gray-600">Beginner to Pro in just weeks – HTML, CSS & JS.</p>
+        <button class="buy-btn bg-blue-600 text-white px-4 py-2 mt-4 rounded" data-id="2">Buy Now</button>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg p-4" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://via.placeholder.com/300x200" class="w-full rounded" alt="Product 3">
+        <h4 class="font-semibold mt-4">Template Pack</h4>
+        <p class="text-sm text-gray-600">Sleek designs for websites, resumes, and more.</p>
+        <button class="buy-btn bg-blue-600 text-white px-4 py-2 mt-4 rounded" data-id="3">Buy Now</button>
+      </div>
+    </div>
+  </section>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- font awesome js -->
-  <script src="https://kit.fontawesome.com/492627f3ac.js" crossorigin="anonymous"></script>
+  <!-- Testimonials -->
+  <section id="testimonials" class="bg-white py-16">
+    <div class="max-w-5xl mx-auto text-center px-4">
+      <h3 class="text-2xl font-bold mb-8">What Customers Say</h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <blockquote class="p-6 bg-gray-100 rounded shadow" data-aos="zoom-in">
+          <p>“I loved how easy it was to download and use the ebook. Highly recommend!”</p>
+          <footer class="mt-4 font-semibold">– Maro</footer>
+        </blockquote>
+        <blockquote class="p-6 bg-gray-100 rounded shadow" data-aos="zoom-in" data-aos-delay="100">
+          <p>“Super fast delivery, amazing design templates. Helped me land a client!”</p>
+          <footer class="mt-4 font-semibold">– Adonis.</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section id="newsletter" class="bg-blue-50 py-16 text-center">
+    <h3 class="text-2xl font-bold mb-4">Stay Updated</h3>
+    <p class="mb-6">Join our newsletter to get the latest on new releases and offers.</p>
+    <form class="max-w-md mx-auto">
+      <input type="email" placeholder="Enter your email" class="w-full p-3 border rounded mb-4" required>
+      <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-10">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8">
+      <div>
+        <h4 class="font-bold mb-4">Marostores</h4>
+        <p>Buy and download digital products securely.</p>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="#home" class="hover:underline">Home</a></li>
+          <li><a href="#products" class="hover:underline">Products</a></li>
+          <li><a href="#newsletter" class="hover:underline">Newsletter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Follow Us</h4>
+        <div class="flex space-x-4">
+          <a href="#" class="hover:text-blue-400">Facebook</a>
+          <a href="#" class="hover:text-pink-400">Instagram</a>
+          <a href="#" class="hover:text-blue-300">Twitter</a>
+        </div>
+      </div>
+    </div>
+    <p class="text-center text-sm mt-10">© 2025 MAROSTORES. All rights reserved.</p>
+  </footer>
+
   <script src="script.js"></script>
-
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

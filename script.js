@@ -1,59 +1,26 @@
+// Toggle Mobile Navigation
+document.getElementById('navToggle').addEventListener('click', () => {
+  const menu = document.getElementById('mobileMenu');
+  menu.classList.toggle('hidden');
+});
 
-function toggleImage(button) {
-    const card = button.closest('.card');
-    const img1 = card.querySelector('.img1');
-    const img2 = card.querySelector('.img2');
-  
-    if (img1.classList.contains('d-none')) {
-      img1.classList.remove('d-none');
-      img2.classList.add('d-none');
-      button.textContent = 'Image One';
-    } else {
-      img1.classList.add('d-none');
-      img2.classList.remove('d-none');
-      button.textContent = 'Image Two';
-    }
-  }
-  
-
-  // scroll navbar  change color 
-
-  // Get the navbar element
-const navbar = document.querySelector('.navbar');
-
-// Add a scroll event listener to the window
+// Sticky header background color change
 window.addEventListener('scroll', () => {
+  const header = document.getElementById('header');
   if (window.scrollY > 50) {
-    navbar.classList.add('navbar-scrolled');
+    header.classList.add('sticky-active');
   } else {
-    navbar.classList.remove('navbar-scrolled');
+    header.classList.remove('sticky-active');
   }
 });
 
+// Basic cart logic
+const cart = [];
 
-const scrollTopBtn = document.getElementById("scrollTopBtn");
-
-// scroll to top function
-window.onscroll = function () {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    scrollTopBtn.style.opacity = "1";  // Fully visible
-    scrollTopBtn.style.pointerEvents = "auto";  // Enable click
-  } else {
-    scrollTopBtn.style.opacity = "1";  // Partially visible
-    scrollTopBtn.style.pointerEvents = "none";  // Prevent click when not needed
-  }
-};
-
-// Scroll to the top when the button is clicked
-scrollTopBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+document.querySelectorAll('.buy-btn').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    const id = e.target.getAttribute('data-id');
+    cart.push(id);
+    alert(`Product ${id} added to cart. Total items: ${cart.length}`);
+  });
 });
-console.log
-
-
-
-  
-
-  
-
- 
